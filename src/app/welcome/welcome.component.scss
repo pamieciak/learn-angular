@@ -1,0 +1,61 @@
+@use "mixins" as *;
+
+.container {
+  width: min(144rem, 95%);
+  padding: 2rem 0;
+  margin-inline: auto;
+}
+
+.header {
+  @include flex(row, unset, center, center);
+
+  width: 100%;
+  background-color: grey;
+  height: 10rem;
+}
+
+.standalone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1rem 1rem;
+  padding: 2rem;
+  width: 30%;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+  background-color: whitesmoke;
+  text-align: center;
+
+  &__links {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 2rem;
+
+    li {
+      list-style: none;
+      transition: all 0.3s;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 2rem;
+        transition: all 0.3s;
+      }
+
+      a:hover {
+        color: royalblue;
+      }
+    }
+
+    li:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
